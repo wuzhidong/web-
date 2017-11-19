@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title></title>
+		<meta charset="utf-8">
+		<style type="text/css">
+			p{
+				background-image: url(images/bg.jpg);
+				margin: 0px;
+				width: 300px;
+				padding: 0px;
+			}
+			#all{
+				width: 300px;
+			}
+			select{
+				float: right;
+			}
+		</style>
+	</head>
+	<body>
+		<div id="all">
+			<p>宝贝与描述相符(打分匿名)</p>
+			<div id="images">
+				<img src="images/star0.png" name="star1">
+				<img src="images/star0.png" name="star2">
+				<img src="images/star0.png" name="star3">
+				<img src="images/star0.png" name="star4">
+				<img src="images/star0.png" name="star5">
+			</div>
+			<textarea cols="40" rows="4" id="txt"></textarea>
+			<select>
+				<option>公开评论</option>
+				<option>匿名评论</option>
+			</select>
+		</div>
+	</body>
+	<script type="text/javascript">
+			var a=["差","合格","中","良","优"];
+			var stars = document.getElementsByTagName('img');
+			var con=false;
+			for(var i = 0 ; i < stars.length;i++){
+				var contentArea = document.getElementById("txt");
+				stars[i].onmouseover = function starPic(){
+					if(con==true)
+					{
+						return ;
+					}
+					var length = this.name.substr(4,1)
+					if(i<=2){
+						for (var j = 0; j < length; j++) {
+							stars[j].src="images/star1.png";
+							contentArea.value=a[j];
+						}
+					}
+					else{
+						for (var j = 0; j < length; j++) {
+							stars[j].src="images/star2.png";
+							contentArea.value=a[j];
+						}
+					}
+				}
+				stars[i].onmouseout = function(){
+					if(con==true)
+					{
+						return ;
+					}
+					for(j = 0 ; j < 5 ; j++){
+						stars[j].src="images/star0.png"
+					}
+					contentArea.value="";
+				}
+				stars[i].onclick = function(){
+					con=(con == true)?false:true;
+				}
+			}
+		</script>
+</html>
