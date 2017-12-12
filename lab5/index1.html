@@ -1,0 +1,69 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+    <title> 仿QQ空间相册 </title>
+    <meta charset="utf-8" />
+    <style type="text/css">
+        #main{
+        width:1000px;
+        margin:auto;
+        }
+        #smallpic{
+        height:120px; 
+        }
+        img{
+        float:left; 
+        margin-right:10px; 
+        margin-bottom:10px;
+        }
+        #smallpic img:hover{
+            cursor:pointer; /*设定鼠标的形状为小手*/
+        }
+        .pb{
+         border:3px solid #14c3fd;
+        } 
+    </style>
+    <script type="text/javascript" src="jquery-3.2.1.slim.min.js"></script>
+    <script type="text/javascript">
+        window.onload = function(){
+            a = document.getElementById('smallpic').children
+        }
+        function change(i) {
+            switch(i) {
+            case 2:
+                $('#bigpic').attr('src', 'images/s2.jpg');
+                break;
+            case 3:
+                $('#bigpic').attr('src', 'images/s3.jpg');
+                break;
+            case 4:
+                $('#bigpic').attr('src', 'images/s4.jpg');
+                break;
+            case 5:
+                $('#bigpic').attr('src', 'images/s5.jpg');
+                break;
+            case 6:
+                $('#bigpic').attr('src', 'images/s6.jpg');
+                break;
+            }
+            $('#smallpic').children('img').css('border', 'none');
+            a[i-2].style.border = "3px solid orange"
+        }
+    </script>
+</head>
+
+<body>
+    <div id="main">
+        <div id="smallpic">
+            <img src="images/s2.jpg" width="180" height="100" onclick="change(2)" />
+            <img src="images/s3.jpg" width="180" height="100" onclick="change(3)" />
+            <img src="images/s4.jpg" width="180" height="100" onclick="change(4)" />
+            <img src="images/s5.jpg" width="180" height="100" onclick="change(5)" />
+            <img src="images/s6.jpg" width="180" height="100" onclick="change(6)" />
+        </div>
+        <div >
+            <img id="bigpic" src="images/s1.jpg" width="940px" />
+        </div>
+    </div>
+</body>
+</html>
