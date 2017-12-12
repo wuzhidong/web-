@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>表格</title>
+	<meta charset="utf-8" />
+	<style type="text/css">
+		*{
+			font-size: 36px;
+		}
+		tr{
+			height: 30px;
+		}
+	</style>
+	<script type="text/javascript">
+		function addRow() {
+			var row = document.createElement('tr');
+			document.getElementsByTagName('tbody')[0].appendChild(row);
+			for (var i = 0; i < 12; i++) {
+				var td = document.createElement('td');
+				list = document.getElementsByTagName('tr');
+				list[list.length-1].appendChild(td);
+			}
+		}
+
+		function deleteRow() {
+			var rows = document.getElementsByTagName('tr');
+			document.getElementsByTagName('tbody')[0].removeChild(rows[rows.length-1])
+		}
+	</script>
+</head>
+<body>
+	<table width="1000px" border="1">
+		<tr height="30px">
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+			<td></td><td></td><td></td><td></td><td></td><td></td>
+		</tr>
+	</table>
+	<input type="button" name="" id="add" value="添加一行" style="margin-left:840px;" onclick="addRow()" />
+	<input type="button" name="" id="delete" value="删除一行" style="margin-left:840px;" onclick="deleteRow()" />
+</body>
+</html>
