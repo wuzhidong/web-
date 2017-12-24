@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<title>用户注册</title>
+	<meta charset="utf-8">
+	<script src="jquery-1.9.1.min.js"></script>
+	<script type="text/javascript">
+		function submit() {
+			if (!$("input[type=text]")[0].value) {
+				$("body").append("用户名不能为空！");
+			} else if (!$("#pswd")[0].value) {
+				$("body").append("密码不能为空！");
+			} else if (!$("#pswd2")[0].value) {
+				$("body").append("确认密码不能为空！	");
+			} else if ($("#pswd")[0].value != $("#pswd2")[0].value) {
+				$("body").append("两次输入的密码不一致！");
+			}
+		}
+	</script>
+</head>
+<body>
+<h1>用户注册</h1>
+<table>
+	<tr>
+		<td>用户名：</td>
+		<td><input type="text"></td>
+	</tr>
+	<tr>
+		<td>密码：</td>
+		<td><input type="password" id="pswd"></td>
+	</tr>
+	<tr>
+		<td>确认密码：</td>
+		<td><input type="password" id="pswd2"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="submit" value="注册" onclick="submit()"></td>
+	</tr>
+</table>
+</body>
+</html>
