@@ -1,0 +1,185 @@
+/*头部*/
+body{
+	margin: 0 auto;
+}
+a{
+	text-decoration:none;
+	color: black;
+}
+a:hover{
+	color: rgb(248,140,148);
+}
+#header_top{
+	margin: 10px auto;
+	width: 900px;
+	height: 70px;
+}
+#logo{
+	float: left;
+	height: 75px;
+}
+div#logo span{
+	font-size: 40px;
+	font-family: 黑体;
+	font-weight: bolder;
+}
+#nav{
+	float: left;
+	margin-top: 25px;
+	height: 50px;
+	margin-left: 20px;
+}
+div#nav span{
+	margin-left: 40px;
+	font-size: 20px;
+}
+#sousuo{
+	float: right;
+	margin-top: 22px;
+	border: 1px solid gray; 
+}
+input[type="text"]{
+	height: 25px;
+	border: 0px;
+}
+input[type="password"]{
+	height: 25px;
+	border: 0px;
+}
+input[type="button"]{
+	width: 45px;
+	height: 30px;
+	background-color: rgba(21,33,46,0.1);
+	border: 0px;
+}
+#banner{
+	background-image: url(images/banner_top.jpg);
+	height: 265px;
+}
+#banner_content{
+	width: 1100px;
+	height: 265px;
+	margin: 0 auto;
+}
+#banner_left{
+	float: left;
+	margin-top: 50px;
+	margin-left: 50px;
+	position: relative;
+}
+#banner_left div{
+	opacity: 0.9;
+	width: 180px;
+	height: 200px;
+	position: absolute;
+	display: none;
+	top:0px;
+	left: -180px;
+	font-size: 16px;
+}
+div#banner_left span{
+	display: inline-block;
+	font-size: 35px;
+	width: 200px;
+	height: 70px;
+}
+div#banner_content img{
+	width: 120px;
+	height: 120px;
+	border: 4px solid #fff;
+	border-radius: 100%;
+	overflow: hidden;
+}
+div#banner_content img:hover{
+	border-color: rgb(145,169,195);
+}
+#banner_right{
+	float: right;
+	margin-top: 20px;
+}
+input{
+	background:;
+	border: 1px solid gray;
+}
+/*主体*/
+#content{
+	height: 900px;
+	width: 1200px;
+	margin: 0 auto;
+}
+#content_top{
+	margin-left: 20px;
+	white-space: nowrap;
+  	overflow: hidden;
+}
+div#content_top img{
+	width: 200px;
+	height: 200px;
+	margin: 20px 0 0 30px;
+	
+}
+#content_left{
+	width: 750px;
+	height: 600px;
+	margin-left: 50px;
+	float: left;
+}
+li{
+	color: #756F71;
+	font-size: 16px;
+	margin-top: 10px;
+}
+div#content_left span{
+	float: right;
+}
+#content_left_top{
+	font-family: 黑体;
+	font-weight: bolder;
+	font-size: 25px;
+	margin-top: 20px;
+	color: rgb(5,245,);
+	width: 700px;
+	background-color: rgba(21,33,46,0.1);
+	padding-top: 10px;
+	padding-bottom: 10px;
+	padding-left: 20px;
+	border: 1px solid black
+}
+div#content_left a{
+	color: rgb(20,24,34);
+}
+#content_right{
+	
+	width: 390px;
+	height: 520px;
+	float: left;
+	margin-top: 20px;
+}
+#list{
+	width: 720px;
+	height: 550px;
+}
+div#content_right img{
+	width: 320px;
+	height: 215px;
+	margin-left: 40px;
+	margin-top: 20px;
+}
+div#content_right span{
+	display: inline-block;
+	margin: 0 auto;
+	width: 60px;
+	margin-left: 180px;
+}
+/*页脚*/
+#footer{
+	margin: 0 auto;
+	height: 30px;
+	background-color: gray;
+	padding-top: 20px;
+	color: white;
+}
+#copyright{
+	margin: 0 auto;
+	width: 200px;
+}
